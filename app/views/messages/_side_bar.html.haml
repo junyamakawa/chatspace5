@@ -4,44 +4,26 @@
       .SideBar__header__user__name
         = current_user.name
       .SideBar__header__user__icons
-        = link_to "#" do
+        = link_to new_group_path do
           = icon('fas', 'edit',class: 'icon')
         = link_to edit_user_path(current_user)  do
           = icon('fas', 'cog', class: 'icon')
 
   .SideBar__body
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
-    .SideBar__body__group
-      .SideBar__body__group__name
-        starsalsa
-      .SideBar__body__group__message
-        hora!
+    - current_user.groups.each do |group|
+      .SideBar__body__group
+        = link_to '#'  do
+          .SideBar__body__group__name
+            = group.name
+          .SideBar__body__group__message
+            hora!
+
+
+
+
+
+      -# .SideBar__body__group__name
+      -#   starsalsa
+      -# .SideBar__body__group__message
+      -#   hora!
+   
