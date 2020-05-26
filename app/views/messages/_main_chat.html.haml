@@ -1,0 +1,27 @@
+.MainChat
+  .MainChat__header
+    .MainChat__header__group
+      .MainChat__header__group__current-group
+        starsalsa
+      .MainChat__header__group__member
+        julian,josiel
+    .MainChat__header__edit-btn
+      = link_to "#",class: "btn" do
+        = "Edit"
+      
+     
+  .MainChat__body
+
+
+  .MainChat__form
+    .MainChat__form__block
+      .MainChat__form__block__input
+        type a message
+      .MainChat__form__block__file
+        %label{class: "image"}
+          = icon('fas', 'image', class: 'icon')
+          %input{type: "file", class: 'files'}
+        
+    .MainChat__form__send
+      SEND
+
